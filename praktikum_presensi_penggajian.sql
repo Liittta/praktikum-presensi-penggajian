@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Des 2021 pada 13.29
+-- Waktu pembuatan: 03 Jan 2022 pada 09.11
 -- Versi server: 10.1.33-MariaDB
 -- Versi PHP: 7.2.6
 
@@ -54,14 +54,14 @@ CREATE TABLE `bagian_karyawan` (
   `id` int(11) NOT NULL,
   `bagian_id` int(11) NOT NULL,
   `karyawan_id` int(11) NOT NULL,
-  `tangg_mulai` date NOT NULL
+  `tanggal_mulai` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `bagian_karyawan`
 --
 
-INSERT INTO `bagian_karyawan` (`id`, `bagian_id`, `karyawan_id`, `tangg_mulai`) VALUES
+INSERT INTO `bagian_karyawan` (`id`, `bagian_id`, `karyawan_id`, `tanggal_mulai`) VALUES
 (1, 1, 5, '2018-03-03'),
 (2, 2, 3, '2018-04-01'),
 (3, 3, 6, '2018-04-04'),
@@ -92,7 +92,7 @@ INSERT INTO `jabatan` (`id`, `nama_jabatan`, `gapok_jabatan`, `tunjangan_jabatan
 (2, 'Project Manager', 2300000, 450000, 38000),
 (3, 'Senior Programmer', 2200000, 400000, 36000),
 (4, 'Junior Programmer', 2100000, 350000, 34000),
-(5, 'Intern', 1000000, 100000, 20000);
+(5, 'Magang', 1000000, 100000, 20000);
 
 -- --------------------------------------------------------
 
@@ -104,14 +104,14 @@ CREATE TABLE `jabatan_karyawan` (
   `id` int(11) NOT NULL,
   `jabatan_id` int(11) NOT NULL,
   `karyawan_id` int(11) NOT NULL,
-  `tangg_mulai` date NOT NULL
+  `tanggal_mulai` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `jabatan_karyawan`
 --
 
-INSERT INTO `jabatan_karyawan` (`id`, `jabatan_id`, `karyawan_id`, `tangg_mulai`) VALUES
+INSERT INTO `jabatan_karyawan` (`id`, `jabatan_id`, `karyawan_id`, `tanggal_mulai`) VALUES
 (1, 3, 5, '2013-03-03'),
 (2, 3, 4, '2014-04-01'),
 (3, 4, 5, '2014-04-04'),
@@ -176,9 +176,9 @@ CREATE TABLE `lokasi` (
 --
 
 INSERT INTO `lokasi` (`id`, `nama_lokasi`) VALUES
-(1, 'Banjarmasin'),
-(2, 'Banjarbaru'),
-(3, 'Gambut');
+(1, 'Kota Banjarmasin'),
+(2, 'Kota Banjarbaru'),
+(3, 'Kabupaten Banjar');
 
 -- --------------------------------------------------------
 
